@@ -26,21 +26,26 @@ const Home = () => {
               style={{ backgroundImage: `url(${hero})` }}
             >
               <div className="absolute inset-0  flex-col flex mt-56 items-center">
-
-                <h3 className="text-black uppercase text-[28px] font-bold">Summer 2024</h3>
-                <h3 className="text-black uppercase text-[45px] font-bold">Discover Our Latest Frock</h3>
-                <h3 className="text-black uppercase text-[45px] font-bold">Collection</h3>
+                <h3 className="text-black uppercase text-[28px] font-bold">
+                  Summer 2024
+                </h3>
+                <h3 className="text-black uppercase text-[45px] font-bold">
+                  Discover Our Latest Frock
+                </h3>
+                <h3 className="text-black uppercase text-[45px] font-bold">
+                  Collection
+                </h3>
                 <Link
-              to="/shop"
-              className="bg-transparent font-bold text-red-600 uppercase  py-1 px-4 mt-3 border border-[3px] border-red-600 hover:text-white hover:bg-red-600 transition-colors "
-            >
-              Shop Now
-            </Link>
+                  to="/shop"
+                  className="bg-transparent font-bold text-red-600 uppercase  py-1 px-4 mt-3 border border-[3px] border-red-600 hover:text-white hover:bg-red-600 transition-colors "
+                >
+                  Shop Now
+                </Link>
               </div>
             </div>
-            <h1 className=" ">New Arrivals Section</h1>
-
-            
+            <h1 className="text-[35px] font-semibold mt-3 capitalize">
+              New Arrivals Section
+            </h1>
           </div>
 
           <div>
