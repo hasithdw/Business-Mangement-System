@@ -4,14 +4,14 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 import Header from "../components/Header";
 import Product from "./Products/Product";
-
+import hero from "../assets/01.webp";
 const Home = () => {
   const { keyword } = useParams();
   const { data, isLoading, isError } = useGetProductsQuery({ keyword });
 
   return (
     <>
-      {!keyword ? <Header /> : null}
+      {/* {!keyword ? <Header /> : null} */}
       {isLoading ? (
         <Loader />
       ) : isError ? (
@@ -20,17 +20,27 @@ const Home = () => {
         </Message>
       ) : (
         <>
-          <div className="flex justify-between items-center">
-            <h1 className="ml-[20rem] mt-[10rem] text-[3rem]">
-              Special Products
-            </h1>
-
-            <Link
-              to="/shop"
-              className="bg-pink-600 font-bold rounded-full py-2 px-10 mr-[18rem] mt-[10rem]"
+          <div className="flex justify-between items-center flex-col">
+            <div
+              className="relative w-[99%] h-[70vh] "
+              style={{ backgroundImage: `url(${hero})` }}
             >
-              Shop
+              <div className="absolute inset-0  flex-col flex mt-56 items-center">
+
+                <h3 className="text-black uppercase text-[28px] font-bold">Summer 2024</h3>
+                <h3 className="text-black uppercase text-[45px] font-bold">Discover Our Latest Frock</h3>
+                <h3 className="text-black uppercase text-[45px] font-bold">Collection</h3>
+                <Link
+              to="/shop"
+              className="bg-transparent font-bold text-red-600 uppercase  py-1 px-4 mt-3 border border-[3px] border-red-600 hover:text-white hover:bg-red-600 transition-colors "
+            >
+              Shop Now
             </Link>
+              </div>
+            </div>
+            <h1 className=" ">New Arrivals Section</h1>
+
+            
           </div>
 
           <div>

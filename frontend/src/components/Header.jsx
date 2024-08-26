@@ -26,7 +26,7 @@ const Header = () => {
             ))}
           </div>
         </div>
-        <ProductCarousel />
+        {/* <ProductCarousel /> */}
       </div>
     </>
   );
