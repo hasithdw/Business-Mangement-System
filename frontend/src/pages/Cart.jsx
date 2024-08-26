@@ -31,7 +31,7 @@ const Cart = () => {
           </div>
         ) : (
           <>
-            <div className="flex flex-col w-[80%]  bg-slate-800 p-5 rounded-md">
+            <div className="flex flex-col w-[80%] pl-20  bg-slate-800 p-5 rounded-md">
               <h1 className="text-4xl font-semibold mb-10 text-center">Shopping Cart</h1>
 
               {cartItems.map((item) => (
