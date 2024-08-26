@@ -181,7 +181,7 @@ const ProductList = () => {
 
             <button
               onClick={handleSubmit}
-              className="p-3 mt-8 w-60 rounded-lg text-lg font-bold bg-pink-600 "
+              className="p-3 mt-8 w-60 rounded-lg text-lg font-bold bg-pink-600 hover:bg-pink-700 "
             >
               Submit
             </button>

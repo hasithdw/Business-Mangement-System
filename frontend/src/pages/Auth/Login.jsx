@@ -83,7 +83,7 @@ const Login = () => {
             <button
               disabled={isLoading}
               type="submit"
-              className="bg-pink-500 text-white px-4 py-2 rounded cursor-pointer my-[1rem]"
+              className="bg-pink-600 text-white px-4 py-2 rounded cursor-pointer my-[1rem] hover:bg-pink-700 "
             >
               {isLoading ? "Signing In..." : "Sign In"}
             </button>
@@ -96,7 +96,7 @@ const Login = () => {
               New Customer?{" "}
               <Link
                 to={redirect ? `/register?redirect=${redirect}` : "/register"}
-                className="text-pink-500 hover:underline"
+                className="text-pink-600 hover:underline  "
               >
                 Register
               </Link>

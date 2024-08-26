@@ -36,7 +36,7 @@ const AdminMenu = () => {
                 className="list-item py-2 px-3 block mb-5 hover:bg-[#2E2D2D] rounded-sm"
                 to="/admin/dashboard"
                 style={({ isActive }) => ({
-                  color: isActive ? "greenyellow" : "white",
+                  color: isActive ? "pink" : "white",
                 })}
               >
                 Admin Dashboard
@@ -47,7 +47,7 @@ const AdminMenu = () => {
                 className="list-item py-2 px-3 block mb-5 hover:bg-[#2E2D2D] rounded-sm"
                 to="/admin/categorylist"
                 style={({ isActive }) => ({
-                  color: isActive ? "greenyellow" : "white",
+                  color: isActive ? "pink " : "white",
                 })}
               >
                 Create Category
@@ -58,7 +58,7 @@ const AdminMenu = () => {
                 className="list-item py-2 px-3 block mb-5 hover:bg-[#2E2D2D] rounded-sm"
                 to="/admin/productlist"
                 style={({ isActive }) => ({
-                  color: isActive ? "greenyellow" : "white",
+                  color: isActive ? "pink" : "white",
                 })}
               >
                 Create Product
@@ -69,7 +69,7 @@ const AdminMenu = () => {
                 className="list-item py-2 px-3 block mb-5 hover:bg-[#2E2D2D] rounded-sm"
                 to="/admin/allproductslist"
                 style={({ isActive }) => ({
-                  color: isActive ? "greenyellow" : "white",
+                  color: isActive ? "pink" : "white",
                 })}
               >
                 All Products
@@ -80,7 +80,7 @@ const AdminMenu = () => {
                 className="list-item py-2 px-3 block mb-5 hover:bg-[#2E2D2D] rounded-sm"
                 to="/admin/userlist"
                 style={({ isActive }) => ({
-                  color: isActive ? "greenyellow" : "white",
+                  color: isActive ? "pink" : "white",
                 })}
               >
                 Manage Users
@@ -91,7 +91,7 @@ const AdminMenu = () => {
                 className="list-item py-2 px-3 block mb-5 hover:bg-[#2E2D2D] rounded-sm"
                 to="/admin/orderlist"
                 style={({ isActive }) => ({
-                  color: isActive ? "greenyellow" : "white",
+                  color: isActive ? "pink" : "white",
                 })}
               >
                 Manage Orders
