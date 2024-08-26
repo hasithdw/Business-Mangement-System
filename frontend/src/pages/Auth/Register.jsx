@@ -48,12 +48,12 @@ const Register = () => {
   };
 
   return (
-    <section className="pl-[10rem] flex flex-wrap">
-      <div className="mr-[4rem] mt-[5rem]">
-        <h1 className="text-2xl font-semibold mb-4">Register</h1>
+    <section className="flex justify-center items-center pl-[10rem]">
+      <div className="mr-[4rem] mt-[5rem] bg-slate-800 p-7 rounded-md">
+        <h1 className="text-4xl font-bold  text-center">Register</h1>
 
-        <form onSubmit={submitHandler} className="container w-[40rem]">
-          <div className="my-[2rem]">
+        <form onSubmit={submitHandler} className="min-w-[500px] flex flex-col">
+          <div className="my-[1rem]">
             <label
               htmlFor="name"
               className="block text-sm font-medium text-white"
@@ -70,7 +70,7 @@ const Register = () => {
             />
           </div>
 
-          <div className="my-[2rem]">
+          <div className="my-[1rem]">
             <label
               htmlFor="email"
               className="block text-sm font-medium text-white"
@@ -87,7 +87,7 @@ const Register = () => {
             />
           </div>
 
-          <div className="my-[2rem]">
+          <div className="my-[1rem]">
             <label
               htmlFor="password"
               className="block text-sm font-medium text-white"
@@ -104,7 +104,7 @@ const Register = () => {
             />
           </div>
 
-          <div className="my-[2rem]">
+          <div className="my-[1rem]">
             <label
               htmlFor="confirmPassword"
               className="block text-sm font-medium text-white"
@@ -124,7 +124,7 @@ const Register = () => {
           <button
             disabled={isLoading}
             type="submit"
-            className="bg-pink-500 text-white px-4 py-2 rounded cursor-pointer my-[1rem]"
+            className="bg-pink-600 text-white px-4 py-2 rounded cursor-pointer my-[1rem] w-full justify-center hover:bg-pink-700  "
           >
             {isLoading ? "Registering..." : "Register"}
           </button>
@@ -132,23 +132,18 @@ const Register = () => {
           {isLoading && <Loader />}
         </form>
 
-        <div className="mt-4">
+        <div className="mt-4 text-center">
           <p className="text-white">
             Already have an account?{" "}
             <Link
               to={redirect ? `/login?redirect=${redirect}` : "/login"}
-              className="text-pink-500 hover:underline"
+              className="text-pink-600 hover:underline"
             >
               Login
             </Link>
           </p>
         </div>
       </div>
-      <img
-        src="https://images.unsplash.com/photo-1576502200916-3808e07386a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2065&q=80"
-        alt=""
-        className="h-[65rem] w-[59%] xl:block md:hidden sm:hidden rounded-lg"
-      />
     </section>
   );
 };

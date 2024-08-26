@@ -11,7 +11,7 @@ const AllProducts = () => {
   }
 
   if (isError) {
-    return <div>Error loading products</div>;
+    return <div>Error loading products.....</div>;
   }
 
   return (
