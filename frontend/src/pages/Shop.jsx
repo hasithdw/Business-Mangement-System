@@ -82,9 +82,9 @@ const Shop = () => {
 
   return (
     <>
-      <div className="container mx-auto">
-        <div className="flex md:flex-row">
-          <div className="bg-[#151515] p-3 mt-2 mb-2">
+      <div className="w-full ">
+        <div className="flex">
+        <div className="bg-slate-800 p-3 mt-2 mb-2 ml-[70px]  rounded-lg">
             <h2 className="h4 text-center py-2 bg-black rounded-full mb-2">
               Filter by Categories
             </h2>
@@ -148,7 +148,7 @@ const Shop = () => {
                 placeholder="Enter Price"
                 value={priceFilter}
                 onChange={handlePriceChange}
-                className="w-full px-3 py-2 placeholder-gray-400 border rounded-lg focus:outline-none focus:ring focus:border-pink-300"
+                className="w-full px-2 py-1 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:border-pink-300"
               />
             </div>
 
@@ -161,21 +161,21 @@ const Shop = () => {
               </button>
             </div>
           </div>
-
-          <div className="p-3">
-            <h2 className="h4 text-center mb-2">{products?.length} Products</h2>
-            <div className="flex flex-wrap">
+          <div className="">
+            <h2 className="text-2xl text-center mb-2">{products?.length} Products</h2>
+            <div className="flex flex-wrap justify-center gap-5">
               {products.length === 0 ? (
                 <Loader />
               ) : (
                 products?.map((p) => (
-                  <div className="p-3" key={p._id}>
+                  <div className="p-2" key={p._id}>
                     <ProductCard p={p} />
                   </div>
                 ))
               )}
             </div>
           </div>
+         
         </div>
       </div>
     </>
