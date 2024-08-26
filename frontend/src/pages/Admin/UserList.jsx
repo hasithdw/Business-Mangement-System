@@ -58,7 +58,7 @@ const UserList = () => {
   };
 
   return (
-    <div className=" flex w-full justify-center items-center ">
+    <div className=" flex w-full justify-center items-center">
       <div className="w-full  pl-[4rem]">
     
       <h1 className="text-4xl font-bold mb-20  text-center">Users</h1>
@@ -69,9 +69,9 @@ const UserList = () => {
           {error?.data?.message || error.error}
         </Message>
       ) : (
-        <div className="flex flex-col md:flex-row  ">
+        <div className="flex flex-col md:flex-row">
           <AdminMenu />
-          <table className="w-full md:w-4/5 mx-auto bg-slate-800 rounded-md ">
+          <table className="w-full md:w-4/5 mx-auto">
             <thead>
               <tr>
                 <th className="px-4 py-2 text-left">ID</th>

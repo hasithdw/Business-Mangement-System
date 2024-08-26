@@ -132,8 +132,7 @@ const AdminDashboard = () => {
             options={state.options}
             series={state.series}
             type="bar"
-            width="900px"
-            height="auto"
+            width="70%"
           />
         </div>
         </div>
