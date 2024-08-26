@@ -24,15 +24,15 @@ const Cart = () => {
 
   return (
     <>
-      <div className="container flex justify-around items-start flex wrap mx-auto mt-8">
+      <div className=" flex justify-around items-start flex wrap mx-auto mt-20 pl-[3rem]">
         {cartItems.length === 0 ? (
           <div>
             Your cart is empty <Link to="/shop">Go To Shop</Link>
           </div>
         ) : (
           <>
-            <div className="flex flex-col w-[80%]">
-              <h1 className="text-2xl font-semibold mb-4">Shopping Cart</h1>
+            <div className="flex flex-col w-[80%]  bg-slate-800 p-5 rounded-md">
+              <h1 className="text-4xl font-semibold mb-10 text-center">Shopping Cart</h1>
 
               {cartItems.map((item) => (
                 <div key={item._id} className="flex items-enter mb-[1rem] pb-2">
@@ -45,11 +45,11 @@ const Cart = () => {
                   </div>
 
                   <div className="flex-1 ml-4">
-                    <Link to={`/product/${item._id}`} className="text-pink-500">
+                    <Link to={`/product/${item._id}`} className="text-pink-500 capitalize text-lg">
                       {item.name}
                     </Link>
 
-                    <div className="mt-2 text-white">{item.brand}</div>
+                    <div className="mt-2 text-gray-400 capitalize text-[15px]">{item.brand}</div>
                     <div className="mt-2 text-white font-bold">
                       $ {item.price}
                     </div>
@@ -57,7 +57,7 @@ const Cart = () => {
 
                   <div className="w-24">
                     <select
-                      className="w-full p-1 border rounded text-black"
+                      className="w-full p-1  border rounded text-black"
                       value={item.qty}
                       onChange={(e) =>
                         addToCartHandler(item, Number(e.target.value))
@@ -82,9 +82,9 @@ const Cart = () => {
                 </div>
               ))}
 
-              <div className="mt-8 w-[40rem]">
-                <div className="p-4 rounded-lg">
-                  <h2 className="text-xl font-semibold mb-2">
+              <div className="mt-8 w-[40rem] self-end  ">
+                <div className="p-4 rounded-lg flex flex-col items-end">
+                  <h2 className="text-xl font-semibold mb-2 ">
                     Items ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
                   </h2>
 
@@ -96,7 +96,7 @@ const Cart = () => {
                   </div>
 
                   <button
-                    className="bg-pink-500 mt-4 py-2 px-4 rounded-full text-lg w-full"
+                    className="bg-pink-600 mt-4 py-2 px-10 rounded-full text-lg hover:bg-pink-700 transition-colors "
                     disabled={cartItems.length === 0}
                     onClick={checkoutHandler}
                   >

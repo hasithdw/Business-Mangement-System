@@ -111,7 +111,7 @@ const ProductList = () => {
               <div className="two ml-10 ">
                 <label htmlFor="name block">Price</label> <br />
                 <input
-                  type="text"
+                  type="number"
                   className="p-2  my-3 w-[30rem] border rounded-md bg-[#101011] text-white"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
@@ -122,7 +122,7 @@ const ProductList = () => {
               <div className="one">
                 <label htmlFor="name block">Quantity</label> <br />
                 <input
-                  type="text"
+                  type="number"
                   className="p-2  my-3 w-[30rem] border rounded-md bg-[#101011] text-white"
                   value={quantity}
                   onChange={(e) => setQuantity(e.target.value)}
