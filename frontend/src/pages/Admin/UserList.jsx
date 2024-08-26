@@ -8,8 +8,8 @@ import {
   useUpdateUserMutation,
 } from "../../redux/api/usersApiSlice";
 import { toast } from "react-toastify";
-// ⚠️⚠️⚠️ don't forget this ⚠️⚠️⚠️⚠️
-// import AdminMenu from "./AdminMenu";
+import AdminMenu from "./AdminMenu";
+
 
 const UserList = () => {
   const { data: users, refetch, isLoading, error } = useGetUsersQuery();
@@ -58,8 +58,10 @@ const UserList = () => {
   };
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-semibold mb-4">Users</h1>
+    <div className=" flex w-full justify-center items-center">
+      <div className="w-full  pl-[4rem]">
+    
+      <h1 className="text-4xl font-bold mb-20  text-center">Users</h1>
       {isLoading ? (
         <Loader />
       ) : error ? (
@@ -68,7 +70,7 @@ const UserList = () => {
         </Message>
       ) : (
         <div className="flex flex-col md:flex-row">
-          {/* <AdminMenu /> */}
+          <AdminMenu />
           <table className="w-full md:w-4/5 mx-auto">
             <thead>
               <tr>
@@ -94,9 +96,9 @@ const UserList = () => {
                         />
                         <button
                           onClick={() => updateHandler(user._id)}
-                          className="ml-2 bg-blue-500 text-white py-2 px-4 rounded-lg"
+                          className="ml-2 bg-pink-600 text-white py-2 px-4 rounded-lg"
                         >
-                          <FaCheck />
+                          <FaCheck  />
                         </button>
                       </div>
                     ) : (
@@ -123,7 +125,7 @@ const UserList = () => {
                         />
                         <button
                           onClick={() => updateHandler(user._id)}
-                          className="ml-2 bg-blue-500 text-white py-2 px-4 rounded-lg"
+                          className="ml-2 bg-pink-600 text-white py-2 px-4 rounded-lg"
                         >
                           <FaCheck />
                         </button>
@@ -166,6 +168,7 @@ const UserList = () => {
           </table>
         </div>
       )}
+      </div>
     </div>
   );
 };
